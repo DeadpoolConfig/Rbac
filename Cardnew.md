@@ -155,3 +155,106 @@ export class DashboardComponent {
 ---
 
 Do you also want me to make it **responsive grid-ready** (so you can pass a list of `Course[]` and display them as cards in a row/column layout)?
+.course-card {
+  width: 320px;
+  background: #1f2937; // dark background like in your UI
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  .image-wrapper {
+    position: relative;
+
+    .thumbnail {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .progress-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #22c55e; // green badge
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 16px;
+    }
+  }
+
+  .content {
+    padding: 14px;
+
+    .title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .platform {
+      margin-bottom: 10px;
+
+      .platform-logo {
+        height: 20px;
+        object-fit: contain;
+      }
+    }
+
+    .rating-row {
+      display: flex;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #d1d5db;
+
+      .star-icon {
+        color: #facc15; // yellow star
+        margin-right: 6px;
+        font-size: 1rem;
+      }
+
+      .rating {
+        color: #fff;
+        font-weight: 500;
+        margin-right: 6px;
+      }
+
+      .details {
+        font-size: 0.8rem;
+        color: #9ca3af;
+      }
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #9ca3af;
+
+      .level {
+        font-weight: 500;
+      }
+
+      .dot {
+        margin: 0 6px;
+      }
+
+      .duration {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
